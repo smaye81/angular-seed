@@ -1,3 +1,7 @@
 <section>
-    Hello {{homeCtrl.location}}
+    <h1>The Beatles Discography</h1>
+    <hr/>
+    <div ng-click="homeCtrl.viewDetails(album)" ng-repeat="album in homeCtrl.albums">
+        <span class="album-title">{{album}}</span>
+    </div>
 </section>

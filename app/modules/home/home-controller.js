@@ -1,6 +1,15 @@
-function HomeController() {
+function HomeController($state, HomeService) {
 
-    this.location = "Browserify!";
+    this.$state = $state;
+    this.HomeService = HomeService;
+
+    this.albums = HomeService.getAlbums();
 }
 
-module.exports = HomeController;
+HomeController.prototype.viewDetails = function (album) {
+
+    this.HomeService.selectedAlbum = album;
+    this.$state.go("details");
+}
+
+module.exports = ['$state', 'HomeService', HomeController];
