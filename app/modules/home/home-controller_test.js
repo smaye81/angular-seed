@@ -1,17 +1,15 @@
 describe('Home Controller Tests', function () {
 
-    var mocks = angular.mock;
-
     var sut;
 
     beforeEach(function () {
 
-        mocks.module(homeModule.name);
+        module(homeModule.name);
 
     });
 
     beforeEach(function () {
-        mocks.module(function ($provide) {
+        module(function ($provide) {    
             $provide.value("HomeService", {
                 getAlbums : function () {
                     return [
@@ -22,12 +20,12 @@ describe('Home Controller Tests', function () {
 
             $provide.value("$state", {
                 go : jasmine.createSpy("go")
-            })
+            });
         });
     });
 
     beforeEach(function () {
-        mocks.inject(function ($controller, $rootScope) {
+        inject(function ($controller, $rootScope) {
             sut = $controller("HomeCtrl", {
                 $scope : $rootScope
             });

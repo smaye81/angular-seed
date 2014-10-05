@@ -10,4 +10,4 @@ HomeController.prototype.viewDetails = function (album) {
 
     this.HomeService.selectedAlbum = album;
     this.$state.go("details");
-}
+};
