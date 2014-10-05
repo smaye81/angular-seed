@@ -15,5 +15,3 @@ function Router($stateProvider, $urlRouterProvider) {
             templateUrl: "modules/home/details.html"
         });
 }
-
-module.exports = Router;

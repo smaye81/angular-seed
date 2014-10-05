@@ -1,11 +1,10 @@
-angular-browserify-seed
+angular-seed
 =======================
 
-Seed project using Angular and Browserify
+Seed project using Angular
 
 Uses:
 
 * Angular
-* Browserify
 * Angular UI Router
 * Bootstrap

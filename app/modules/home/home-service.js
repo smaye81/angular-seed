@@ -22,5 +22,3 @@ function HomeService () {
 
     this.selectedAlbum = null;
 }
-
-module.exports = HomeService;

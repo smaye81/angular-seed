@@ -2,8 +2,6 @@ describe('Home Controller Tests', function () {
 
     var mocks = angular.mock;
 
-    var homeModule = require("./home");
-
     var sut;
 
     beforeEach(function () {
