@@ -1,10 +1,33 @@
 // Describe the Context for your tests
+describe('Home Controller Tests', function () {
 
-// Load module using Angular Mocks
+    var sut;
 
-// Mock dependencies using $provide.value
+    beforeEach(function () {
+        module(homeModule.name);
+    });
 
-// Inject $controller provider
+    beforeEach(function () {
 
-// Create spies
+        module(function ($provide) {
+            $provide.value("HomeService", {
+                getLocation : jasmine.createSpy("HomeService getLocation")
+            });
 
+            $provide.value("$state", {});
+        })
+    });
+
+    beforeEach(function () {
+
+        inject(function ($controller, _$rootScope_) {
+            sut = $controller("HomeCtrl", {
+                $scope : _$rootScope_
+            })
+        })
+    });
+
+    it('should be defined', function () {
+        expect(sut).toBeDefined();
+    })
+});

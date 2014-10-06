@@ -8,10 +8,5 @@ function Router($stateProvider, $urlRouterProvider) {
             url: "/home",
             controller : "HomeCtrl as homeCtrl",
             templateUrl: "modules/home/home.html"
-        })
-        .state('details', {
-            url: "/details",
-            controller : "DetailsCtrl as detailsCtrl",
-            templateUrl: "modules/home/details.html"
         });
 }

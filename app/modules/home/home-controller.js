@@ -1,13 +1,4 @@
-function HomeController($state, HomeService) {
+function HomeController(HomeService) {
 
-    this.$state = $state;
-    this.HomeService = HomeService;
-
-    this.albums = HomeService.getAlbums();
+    this.location = HomeService.getLocation();
 }
-
-HomeController.prototype.viewDetails = function (album) {
-
-    this.HomeService.selectedAlbum = album;
-    this.$state.go("details");
-};
