@@ -6,3 +6,9 @@ body {
     cursor:pointer;
     font-weight:bold;
 }
+.album-img {
+    margin-bottom: 12px;
+    width:300px;
+    height:300px;
+    border:1px solid #ccc;
+}

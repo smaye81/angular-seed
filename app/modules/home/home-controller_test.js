@@ -1,55 +1,10 @@
-describe('Home Controller Tests', function () {
+// Describe the Context for your tests
 
-    var sut;
+// Load module using Angular Mocks
 
-    beforeEach(function () {
+// Mock dependencies using $provide.value
 
-        module(homeModule.name);
+// Inject $controller provider
 
-    });
+// Create spies
 
-    beforeEach(function () {
-        module(function ($provide) {    
-            $provide.value("HomeService", {
-                getAlbums : function () {
-                    return [
-                        "Blah"
-                    ]
-                }
-            });
-
-            $provide.value("$state", {
-                go : jasmine.createSpy("go")
-            });
-        });
-    });
-
-    beforeEach(function () {
-        inject(function ($controller, $rootScope) {
-            sut = $controller("HomeCtrl", {
-                $scope : $rootScope
-            });
-        })
-    });
-    
-    it('should pass', function () {
-        expect(sut.albums).toEqual(["Blah"]);
-    });
-    
-});
-
-
-
-
-
-
-// Describe
-
-// Load angular mocks
-// Load the module under test
-
-// Use Angular mocks to load our module
-
-// $provide value for dependencies mocks module
-
-// mocks.inject for controller

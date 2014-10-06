@@ -1,4 +1,7 @@
 <section>
-    <h1>{{detailsCtrl.selectedAlbum}}</h1>
-    <button ui-sref="home" class="btn btn-primary">Back</button>
+    <h1>{{detailsCtrl.selectedAlbum.title}}</h1>
+    <img src="{{detailsCtrl.selectedAlbum.cover}}" class="album-img"/>
+    <div>
+        <button ui-sref="home" class="btn btn-primary">Back</button>
+    </div>
 </section>
